@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=PT+Serif&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Weather Search App</h2>
+      <div class="row">
+        <div class="col-6">
+          <div class="row common-cities">
+            <div class="col-3">
+              <a href="" id="new-york">New York</a>
+            </div>
+            <div class="col-3 paris-city">
+              <a href="" id="paris">Paris</a>
+            </div>
+            <div class="col-6">
+              <a href="" id="shanghai">Shanghai</a>
+            </div>
+          </div>
+          <div class="current-city" id="current-city-name"></div>
+          <div id="current-day"></div>
+          <div id="description"></div>
+        </div>
+        <div class="col-6 left-side">
+          <br />
+          <form class="search-area">
+            <input
+              type="search"
+              placeholder="Search any city"
+              class="search-space"
+              id="city-name-input"
+              autofocus
+            />
+            <button>Search</button>
+            <button id="current-location-button" title="Your current location">
+              📍
+            </button>
+          </form>
+          <div class="current-temp">
+            <span id="weather-icon"> ☁ </span
+            ><span id="current-temp-value"></span
+            ><a href="#" id="celsius">°C</a> |
+            <a href="#" id="fahrenheit">°F</a>
+          </div>
+          <div>Pressure: <span id="pressure"></span> hPa</div>
+          <div>Humidity: <span id="humidity"></span> %</div>
+          <div>Wind: <span id="wind"></span> m/s</div>
+        </div>
+      </div>
+      <hr class="horizontal-line" />
+      <div class="row">
+        <div class="col">
+          <div class="following-days">Sun</div>
+          <div class="symbol">🌧</div>
+          <div>19°C</div>
+        </div>
+        <div class="col">
+          <div class="following-days">Mon</div>
+          <div class="symbol">☁</div>
+          <div>21°C</div>
+        </div>
+        <div class="col">
+          <div class="following-days">Tue</div>
+          <div class="symbol">☀</div>
+          <div>25°C</div>
+        </div>
+        <div class="col">
+          <div class="following-days">Wed</div>
+          <div class="symbol">☁</div>
+          <div>22°C</div>
+        </div>
+        <div class="col">
+          <div class="following-days">Thu</div>
+          <div class="symbol">🌤</div>
+          <div>26°C</div>
+        </div>
+        <div class="col">
+          <div class="following-days">Fri</div>
+          <div class="symbol">☀</div>
+          <div>25°C</div>
+        </div>
+        <div class="col">
+          <div class="following-days">Sat</div>
+          <div class="symbol">☀</div>
+          <div>19°C</div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
