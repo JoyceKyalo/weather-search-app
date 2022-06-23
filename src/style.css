@@ -19,6 +19,10 @@ h2 {
   text-align: center;
   font-family: "DM Serif Display", serif;
 }
+
+small {
+  margin-left: 235px;
+}
 .container {
   background-color: #dddcdc;
   border: 3px solid #000000;
@@ -27,6 +31,7 @@ h2 {
   padding: 20px 30px 50px 30px;
   max-width: 900px;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .row .common-cities {
