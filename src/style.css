@@ -118,3 +118,7 @@ small {
   background-color: #0b5ed7;
   cursor: pointer;
 }
+
+#weather-icon {
+  margin-left: -20px;
+}
