@@ -46,6 +46,12 @@ function showTemperature(response) {
   let wind = document.querySelector("#wind");
   let weatherDescription = document.querySelector("#description");
   let currentPressure = document.querySelector("#pressure");
+  let icon = document.querySelector("#weather-icon");
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  icon.setAttribute("alt", response.data.weather[0].description);
   currentCityName.innerHTML = name;
   temperature.innerHTML = temp;
   weatherHumidity.innerHTML = humidity;
