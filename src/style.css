@@ -91,6 +91,11 @@ small {
   text-transform: capitalize;
 }
 
+.current-temp .active {
+  color: #000000;
+  cursor: default;
+}
+
 #celsius {
   text-decoration: none;
 }

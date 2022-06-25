@@ -111,6 +111,9 @@ shanghai.addEventListener("click", showShanghaiTemp);
 
 function showFahrenheitTemperature(event) {
   event.preventDefault();
+  //remove active class from celsius link and add to fahrenheit link
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let temperature = document.querySelector("#current-temp-value");
   let fahrenheitTemperature = (temp * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemperature);
@@ -118,6 +121,9 @@ function showFahrenheitTemperature(event) {
 
 function showCelsiusTemperature(event) {
   event.preventDefault();
+  //remove active class from fahrenheit link and add to celsius link
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   let temperature = document.querySelector("#current-temp-value");
   temperature.innerHTML = temp;
 }
