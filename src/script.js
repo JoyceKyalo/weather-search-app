@@ -17,9 +17,6 @@ document.querySelector(
   "#current-day"
 ).innerHTML = `${currentDay} ${currentTime}`;
 
-//Nairobi city displayed upon loading/reloading the webpage
-searchCity("Nairobi");
-
 //displays searched city name and temperature details
 function search(event) {
   event.preventDefault();
@@ -34,7 +31,7 @@ function searchCity(city) {
 }
 
 function showTemperature(response) {
-  let temp = Math.round(response.data.main.temp);
+  temp = Math.round(response.data.main.temp);
   let name = `${response.data.name}, ${response.data.sys.country}`;
   let description = response.data.weather[0].description;
   let humidity = response.data.main.humidity;
@@ -111,3 +108,27 @@ function showShanghaiTemp(event) {
 
 let shanghai = document.querySelector("#shanghai");
 shanghai.addEventListener("click", showShanghaiTemp);
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#current-temp-value");
+  let fahrenheitTemperature = (temp * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#current-temp-value");
+  temperature.innerHTML = temp;
+}
+
+let temp = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+//Nairobi city displayed upon loading/reloading the webpage
+searchCity("Nairobi");
