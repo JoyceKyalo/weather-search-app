@@ -15,7 +15,7 @@ let currentDay = days[day];
 let currentTime = now.toLocaleTimeString("en-US");
 document.querySelector(
   "#current-day"
-).innerHTML = `${currentDay} ${currentTime}`;
+).innerHTML = `Last updated on: ${currentDay} ${currentTime}`;
 
 //displays searched city name and temperature details
 function search(event) {
