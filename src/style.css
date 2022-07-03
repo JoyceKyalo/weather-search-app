@@ -83,8 +83,8 @@ small {
   font-weight: bold;
 }
 
-.symbol {
-  font-size: 38px;
+.weather-forecast {
+  text-align: center;
 }
 
 .current-city {
