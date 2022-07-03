@@ -30,6 +30,11 @@ function searchCity(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+function getForecast(coordinates) {
+  let apiKey = "2d5c28f46f35496c26b3294dfcae8329";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 function showTemperature(response) {
   temp = Math.round(response.data.main.temp);
   let name = `${response.data.name}, ${response.data.sys.country}`;
@@ -55,6 +60,8 @@ function showTemperature(response) {
   wind.innerHTML = windspeed;
   weatherDescription.innerHTML = description;
   currentPressure.innerHTML = pressure;
+
+  getForecast(response.data.coord);
 }
 
 let searchButton = document.querySelector("button");
@@ -136,7 +143,8 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -153,6 +161,5 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
-displayForecast();
 //Nairobi city displayed upon loading/reloading the webpage
 searchCity("Nairobi");
