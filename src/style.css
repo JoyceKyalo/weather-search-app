@@ -96,6 +96,10 @@ small {
   cursor: default;
 }
 
+.forecast-temp-max {
+  opacity: 0.7;
+}
+
 #celsius {
   text-decoration: none;
 }
