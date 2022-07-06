@@ -24,7 +24,7 @@ small {
   margin-left: 235px;
 }
 .container {
-  background-color: #dddcdc;
+  background-color: #bebebede;
   border: 3px solid #000000;
   border-radius: 4px;
   font-family: "PT Serif", serif;
@@ -37,6 +37,7 @@ small {
 .row .common-cities {
   padding-top: 20px;
   padding-bottom: 40px;
+  margin-top: 15px;
 }
 
 .search-area {
@@ -69,6 +70,8 @@ small {
 .current-city {
   font-size: 25px;
   font-weight: bold;
+  margin-top: 10px;
+  text-transform: capitalize;
 }
 
 .paris-city {
@@ -85,10 +88,6 @@ small {
 
 .weather-forecast {
   text-align: center;
-}
-
-.current-city {
-  text-transform: capitalize;
 }
 
 .current-temp .active {
