@@ -116,32 +116,7 @@ function showShanghaiTemp(event) {
 let shanghai = document.querySelector("#shanghai");
 shanghai.addEventListener("click", showShanghaiTemp);
 
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  //remove active class from celsius link and add to fahrenheit link
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let temperature = document.querySelector("#current-temp-value");
-  let fahrenheitTemperature = (temp * 9) / 5 + 32;
-  temperature.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function showCelsiusTemperature(event) {
-  event.preventDefault();
-  //remove active class from fahrenheit link and add to celsius link
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-  let temperature = document.querySelector("#current-temp-value");
-  temperature.innerHTML = temp;
-}
-
 let temp = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 function displayForecastDays(timestamp) {
   let date = new Date(timestamp * 1000);
